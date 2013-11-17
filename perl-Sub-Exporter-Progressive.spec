@@ -2,7 +2,7 @@
 %define upstream_version 0.001011
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version_%{upstream_version}
+Version:    %perl_convert_version %{upstream_version}
 Release:    1
 
 Summary:    Only use Sub::Exporter if you need it

@@ -14,6 +14,7 @@ Source0:    http://www.cpan.org/modules/by-module/Sub/%{upstream_name}-%{upstrea
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Test::More) >= 0.880.0
 BuildRequires: perl(JSON::PP)
+BuildRequires: perl-devel
 BuildArch:  noarch
 
 %description

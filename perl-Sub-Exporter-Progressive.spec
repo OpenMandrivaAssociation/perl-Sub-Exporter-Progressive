@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Release:    4
 
 Summary:    Only use Sub::Exporter if you need it
 License:    GPL+ or Artistic

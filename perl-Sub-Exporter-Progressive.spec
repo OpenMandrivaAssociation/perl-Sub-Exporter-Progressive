@@ -1,9 +1,9 @@
 %define upstream_name    Sub-Exporter-Progressive
-%define upstream_version 0.001011
+%define upstream_version 0.001013
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    8
+Release:    1
 
 Summary:    Only use Sub::Exporter if you need it
 License:    GPL+ or Artistic

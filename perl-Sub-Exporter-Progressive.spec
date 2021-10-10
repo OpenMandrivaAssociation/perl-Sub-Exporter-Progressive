@@ -1,21 +1,20 @@
-%define upstream_name    Sub-Exporter-Progressive
+%define upstream_name Sub-Exporter-Progressive
 %define upstream_version 0.001013
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    5
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	5
+Summary:	Only use Sub::Exporter if you need it
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://metacpan.org/pod/Sub::Exporter::Progressive
+Source0:	http://www.cpan.org/modules/by-module/Sub/%{upstream_name}-%{upstream_version}.tar.gz
 
-Summary:    Only use Sub::Exporter if you need it
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://metacpan.org/pod/Sub::Exporter::Progressive
-Source0:    http://www.cpan.org/modules/by-module/Sub/%{upstream_name}-%{upstream_version}.tar.gz
-
-BuildRequires: perl(ExtUtils::MakeMaker)
-BuildRequires: perl(Test::More) >= 0.880.0
-BuildRequires: perl(JSON::PP)
-BuildRequires: perl-devel
-BuildArch:  noarch
+BuildRequires:	perl(ExtUtils::MakeMaker)
+BuildRequires:	perl(Test::More) >= 0.880.0
+BuildRequires:	perl(JSON::PP)
+BuildRequires:	perl-devel
+BuildArch:	noarch
 
 %description
 the Sub::Exporter manpage is an incredibly powerful module, but with that
@@ -36,16 +35,15 @@ use 'Sub::Exporter', so you might as well use it directly.
 %build
 perl Makefile.PL INSTALLDIRS=vendor
 
-%make
+%make_build
 
 %check
-%make test
+make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
-%doc Changes META.json META.yml MYMETA.yml README
-%{_mandir}/man3/*
+%doc Changes META.json META.yml README
 %{perl_vendorlib}/*
-
+%doc %{_mandir}/man3/*

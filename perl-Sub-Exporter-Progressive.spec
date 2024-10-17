@@ -7,7 +7,7 @@ Release:	1
 Summary:	Only use Sub::Exporter if you need it
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Sub::Exporter::Progressive
+Url:		https://metacpan.org/pod/Sub::Exporter::Progressive
 Source0:	http://www.cpan.org/modules/by-module/Sub/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(ExtUtils::MakeMaker)

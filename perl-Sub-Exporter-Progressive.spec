@@ -1,14 +1,12 @@
 %define upstream_name Sub-Exporter-Progressive
-%define upstream_version 0.001013
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	0.001013
+Release:	3
 Summary:	Only use Sub::Exporter if you need it
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Sub::Exporter::Progressive
-Source0:	http://www.cpan.org/modules/by-module/Sub/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Sub/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl(ExtUtils::MakeMaker)
@@ -31,7 +29,7 @@ advanced 'Sub::Exporter' features like currying, this module will only ever
 use 'Sub::Exporter', so you might as well use it directly.
 
 %prep
-%autosetup -p1 -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
